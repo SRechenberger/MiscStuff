@@ -5,14 +5,14 @@ main :-
   Ma = 'Maria',
   As = 'Asma',
   verteilung([Sr, Mo, Th, Ma, As],
-    [ (('Montag', 10), [Sr, Mo, Ma, As]),
-      (('Montag', 12), [Sr, Ma, As]),
-      (('Dienstag', 16), [Sr, Mo, Ma, As, Th]),
-      (('Mittwoch', 10), [Sr, Th, As]),
-      (('Mittwoch', 14), [Sr, Mo, Ma, As]),
+    [ (('Montag', 10),     [Sr, Mo, Ma]),
+      (('Montag', 12),     [Sr, Ma]),
+      (('Dienstag', 16),   [Sr, Mo, Ma, Th]),
+      (('Mittwoch', 10),   [Sr, Th, As]),
+      (('Mittwoch', 14),   [Sr, Mo, Ma, As]),
       (('Donnerstag', 12), [Sr, Mo, Th, Ma]),
-      (('Freitag', 10), [mo, Th, Ma]),
-      (('Freitag', 12), [Sr, Mo, Ma, As])
+      (('Freitag', 10),    [Mo, Th, Ma]),
+      (('Freitag', 12),    [Mo, Ma, As])
     ],
     Ds),
     %Einschränkungen:
@@ -21,13 +21,8 @@ main :-
   write_dates(Ds).
 
 write_date(((Day,Time),[T1,T2,T3])) :-
-%  write(Day), write(Time), write('-'),
   Time1 is Time+2,
   format('~w ~d-~d:~20|~w, ~w, ~w', [Day, Time, Time1, T1, T2, T3]).
-%  write(Time1), write(':\t'),
-%  write(T1), write(', '),
-%  write(T2), write(', '),
-%  write(T3).
 
 write_dates([]).
 write_dates([D|Ds]) :-
