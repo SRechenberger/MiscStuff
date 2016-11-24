@@ -1,0 +1,8 @@
+(App (App
+  (Abs "id" 
+    (App (App
+      (Abs "f" (Abs "g" (Abs "x"
+        (App (Atom "f") (App (Atom "g") (Atom "x"))))))
+      (Atom "id"))
+    (Atom "id")))
+  (Abs "x" (Atom "x"))) (Atom "fritz"))
