@@ -75,7 +75,8 @@ int main(){
      
   for(int i = 0; i < n; i++){
     for(int j = 0; j < k; j++){
-      alpha[i][j] = 1;
+      int r = rand() % 2;
+      alpha[i][j] = r;
     }
   }
 
@@ -88,8 +89,8 @@ int main(){
     int v1, v2;
     scanf("%d %d", &v1, &v2);
     for(int j = 0; j < k; j++){
-      F[clause][0] = (Literal) {v1-1, k};
-      F[clause][1] = (Literal) {v2-1, k};
+      F[clause][0] = (Literal) {v1-1, j};
+      F[clause][1] = (Literal) {v2-1, j};
       clause++;
     }
   }
@@ -105,6 +106,10 @@ int main(){
       }
     }
   }
+  for(int i = 0; i < clause; i++){
+    printf("{(%d,%d), (%d,%d)}\n", F[i][0].node, F[i][0].color, F[i][1].node, F[i][1].color);
+  }
+  printf("CLAUSES=%d clause=%d\n", CLAUSES, clause);
   printf("Asking Solver\n");
   int sat = color_sat(F,alpha);
   printf("F in SAT?: %d\n", sat);

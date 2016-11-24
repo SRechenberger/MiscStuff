@@ -1,2 +1,2 @@
-max_color: max_color.c
-  gcc -std=gnu11 -Wall -o max_color max_color.c
+mc: max_color.c
+	gcc -std=gnu11 -Wall -o mc max_color.c
