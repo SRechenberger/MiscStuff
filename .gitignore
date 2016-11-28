@@ -18,44 +18,8 @@ cabal.sandbox.config
 .stack-work/
 cabal.project.local
 .HTF/
+sat_sandbox/
 
-
-Skip to content
-Personal
-Open source
-Business
-Explore
-Pricing
-Blog
-Support
-This repository
-
-1,838
-41,996
-
-    16,779
-
-github/gitignore
-Code
-Pull requests 166
-Projects 0
-Pulse
-Graphs
-gitignore/C.gitignore
-326dc28 12 days ago
-@Leandros Leandros Merge branch 'master' into HEAD
-@Leandros
-@aarian93p
-@rye
-@dashed
-@eugpermar
-@dybekm
-@starrify
-@arsenm
-@mattjeffery
-@adericbourg
-@snisarg
-52 lines (43 sloc) 415 Bytes
 # Prerequisites
 *.d
 
@@ -107,9 +71,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-    Contact GitHub API Training Shop Blog About 
-
-    © 2016 GitHub, Inc. Terms Privacy Security Status Help 
-
-

@@ -116,5 +116,6 @@ outputSource :: Monad m => Output -> Producer m Text
 outputSource output = (do
   forM_ (output ^. comments) $ \c -> yield ("c " <> c)
   yield $ "s " <> T.pack (show (output ^. solution))
-  yield $ "v " <> (T.unwords $ map (T.pack . show) $ S.toList $ output ^. values))
+  when (output ^. solution == SATISFIABLE) $
+    yield $ "v " <> (T.unwords $ map (T.pack . show) $ S.toList $ output ^. values))
   =$= C.unlines
