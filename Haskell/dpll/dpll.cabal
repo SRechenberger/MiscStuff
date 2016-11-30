@@ -2,7 +2,7 @@
 -- see http://haskell.org/cabal/users-guide/
 
 name:                dpll
-version:             0.1.0.1
+version:             0.1.1.0
 -- synopsis:            
 -- description:         
 license:             BSD3
@@ -21,7 +21,7 @@ executable dpll
     Solver
   -- other-extensions:    
   build-depends:
-    base >=4.9 && <4.10,
+    base >=4.8 && <4.10,
     dimacs >0.1,
     conduit,
     conduit-combinators,
