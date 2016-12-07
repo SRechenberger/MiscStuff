@@ -17,6 +17,7 @@ cabal-version:       >=1.10
 
 executable dpll
   main-is:             Main.hs
+  ghc-options: -threaded
   other-modules:
     Solver
   -- other-extensions:    
